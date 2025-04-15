@@ -20,13 +20,17 @@ function SinglePage() {
       });
   }, []);
 
+  if (item === null) return (
+    <div>...isLoading</div>
+  )
+
   return (
     <div className="detail">
         <Link to={'/'}>Go Back</Link>
       <h2>Item Details</h2>
-      <p>ID: {item!.id}</p>
-      <p>Name: {item!.name}</p>
-      <p>Description: {item!.description}</p>
+      <p>ID: {item.id}</p>
+      <p>Name: {item.name}</p>
+      <p>Description: {item.description}</p>
     </div>
   );
 }

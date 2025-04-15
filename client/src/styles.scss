@@ -227,11 +227,26 @@ ul, li {
   background-color: #dcdbdb;
   border-radius: 8px;
 
-  & > a {
+  &__body {
     padding: 16px;
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+    position: relative;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
   }
 
   * {
@@ -251,6 +266,7 @@ ul, li {
 .list-item__description {
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .list-item-actions {
